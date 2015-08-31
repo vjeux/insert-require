@@ -1,12 +1,12 @@
 {
   "name": "insert-require",
-  "main": "./lib/atom-insert-require",
+  "main": "./lib/insert-require",
   "version": "1.0.0",
   "description": "Atom plugin to automatically insert require",
   "activationCommands": {
-    "atom-workspace": "atom-insert-require:insert"
+    "atom-workspace": "insert-require:insert"
   },
-  "repository": "https://github.com/vjeux/atom-insert-require",
+  "repository": "https://github.com/vjeux/insert-require",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   }

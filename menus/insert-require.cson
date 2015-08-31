@@ -2,18 +2,18 @@
   'atom-text-editor': [
     {
       'label': 'Insert require'
-      'command': 'atom-insert-require:insert'
+      'command': 'insert-require:insert'
     }
   ]
 'menu': [
   {
     'label': 'Packages'
     'submenu': [
-      'label': 'atom-insert-require'
+      'label': 'insert-require'
       'submenu': [
         {
           'label': 'Insert require'
-          'command': 'atom-insert-require:insert'
+          'command': 'insert-require:insert'
         }
       ]
     ]

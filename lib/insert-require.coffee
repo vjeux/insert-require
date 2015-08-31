@@ -29,7 +29,7 @@ getPoints = (str) ->
 
 module.exports =
   activate: ->
-    atom.commands.add 'atom-workspace', "atom-insert-require:insert", => @insert()
+    atom.commands.add 'atom-workspace', "insert-require:insert", => @insert()
 
   insert: ->
     # This assumes the active pane item is an editor
