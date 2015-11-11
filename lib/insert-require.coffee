@@ -46,7 +46,10 @@ module.exports =
 
     lines = editor.getText().split '\n'
 
-    requireRegex = /^var [a-zA-Z0-9]+ = require/
+    path = require 'path'
+    isCoffee = path.extname(editor.getPath()) == '.coffee'
+
+    requireRegex = isCoffee and /^[a-zA-Z0-9]+ = require/ or /^var [a-zA-Z0-9]+ = require/
     startRequire = -1
     endRequire = lines.length
     for line, i in lines
@@ -64,7 +67,7 @@ module.exports =
       endRequire = 0
 
     requires = lines.slice startRequire, endRequire
-    toAdd = "var #{requireName} = require('#{requireName}');"
+    toAdd = isCoffee and "#{requireName} = require '#{requireName}'" or "var #{requireName} = require('#{requireName}');"
     if requires.indexOf(toAdd) is -1
       requires.push toAdd
     requires.sort cmp
